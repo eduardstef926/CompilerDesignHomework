@@ -1,0 +1,20 @@
+
+
+program ::= "var" decllist ";"
+decllist ::= declaration "," declaration ";" decllist
+declaration ::= identifier ":" type
+type1 ::= "bool" | "char" | "int"
+arraydecl ::= "array" "[" nr "]" "of" type1
+type ::= type1 | arraydecl
+statementlist ::= stmt | stmt ";" stmtlist
+statement ::= simplstmt | structstmt
+simplstmt ::= assignstmt | iostmt
+structstmt ::=  ifstmt | whilestmt
+expression ::= expression "+" term | term
+term ::= term "*" factor | factor
+factor ::= "(" expression ")" | identifier
+assignstmt ::= identifier "=" expression
+iostmt ::= "read" | "print" "(" identifier ")"
+ifstmt = "if" "(" condition ")" "{" {statement} "}" "else" "{" {statement} "}"
+whilestmt ::= "while" "(" condition ")" "{" statement "}"
+condition ::= expression "<" | "<=" | "=" | "<>" | ">=" | ">" expression
