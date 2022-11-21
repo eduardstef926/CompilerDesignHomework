@@ -1,0 +1,18 @@
+
+// we have the code here
+
+var a;
+var b, c;
+a = "this is a string";
+b = 2;
+int d[3];
+d[0] = a;
+print(a);
+if(b == 2){
+	print(b);
+} else {
+	print(c);
+}
+while (b == 2){
+	b *= 2;
+}
