@@ -1,6 +1,0 @@
-Documentation:
-Here we have the code for implementing the deterministic finite automata algorithm.
-The algorithm will split the string and put the values into 4 hashSets and when
-we choose print on the menu we are going to print all the values into those hashsets.
-When we check a sequence we check if the sequence is deterministic or not and then
-we check if it is the transition of the states and sequence exist (pair<int,int>)
