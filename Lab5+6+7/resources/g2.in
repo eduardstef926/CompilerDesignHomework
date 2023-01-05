@@ -1,0 +1,20 @@
+program decllist declaration type1 arraydecl type statementlist statement simplstmt structstmt expression term factor assignstmt iostmt ifstmt whilestmt condition
+var ";" "," identifier ":" "bool" "char" "int" "array" "[" "]" nr "of" stmt stmtlist "+" "*" "(" ")" "=" "read" "print" "<" "<=" "=" "<>" ">=" ">"
+program
+program->var decllist ";"
+decllist->declaration "," declaration ";" decllist
+declaration->identifier ":" type
+type->"bool" "char" "int" arraydecl
+arraydecl->"array" "[" nr "]" "of" type statementlist
+statementlist->statement | statement ";" stmtlist
+statement->simplstmt | structstmt
+simplstmt->assignstmt | iostmt
+structstmt->ifstmt | whilestmt
+expression->expression "+" term
+term->term "*" factor factor
+factor->"(" expression ")" | identifier
+assignstmt->identifier "=" expression
+iostmt->"read" | "print" "(" identifier ")"
+ifstmt->"if" "(" condition ")" "{" {statement} "}" "else" "{" {statement} "}"
+whilestmt->"while" "(" condition ")" "{" statement "}"
+condition->expression "<" | "<=" | "=" | "<>" | ">=" | ">" expression

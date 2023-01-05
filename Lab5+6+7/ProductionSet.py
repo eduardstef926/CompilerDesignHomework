@@ -4,8 +4,14 @@ class ProductionSet:
         self.hashMap = {}
         self.isCFG = True
 
-    def getProductionSet(self):
+    def getSet(self):
         return self.hashMap
+
+    def getKeys(self):
+        return self.hashMap.keys()
+
+    def getValue(self, key):
+        return self.hashMap.get(key)
 
     def getIsCFG(self):
         return self.isCFG
