@@ -2,8 +2,9 @@
 
 class ParserOutput:
 
-    def __init__(self, grammar):
+    def __init__(self, grammar, fileName):
         self.grammar = grammar
+        self.fileName = fileName
 
     def runParsing(self):
         self.printMenu()
@@ -45,14 +46,12 @@ class ParserOutput:
                     self.parse(index, valueList[symbol], visited, tableOfValues)
 
     def runPrintMenu(self, tableOfValues):
-        done = False
-        while not done:
-            self.printFileMenu()
-            command = int(input("command:"))
-            if command == 1:
-                self.printTableToScreen(tableOfValues)
-            else:
-                self.printTableToFile(tableOfValues)
+        self.printFileMenu()
+        command = int(input("command:"))
+        if command == 1:
+            self.printTableToScreen(tableOfValues)
+        else:
+            self.printTableToFile(tableOfValues)
 
     def printTableToScreen(self, tableValues):
         print('    '.join(tableValues[0]))
@@ -62,7 +61,7 @@ class ParserOutput:
             print("\n")
 
     def printTableToFile(self, tableValues):
-        file = open("resources/output.txt", "w")
+        file = open(self.fileName, "w")
         file.write("----------------Table of Values---------------\n")
         for i in range(1, len(tableValues)):
             for j in tableValues[i]:
