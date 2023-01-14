@@ -1,17 +1,17 @@
 // compute the maximum of 3 numbers
+// error versions
 int x
 read x
 int y
 read y
 int z 
 read z
-int max
-max=0
+max=0 // forgot to initialize the variable
 if(max < x){
    max=x;
 }
 if(max < y){
-   max=y;
+   max==y;  //it should be "=" not "=="
 }
 if(max < z){
    max=z;
