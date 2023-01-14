@@ -41,6 +41,10 @@ class Grammar:
     def getProductionSetValue(self, key):
         return self.productionSet.getValue(key)
 
+    def getProductionSetToString(self):
+        return self.productionSet.toString()
+
+
 
 
 

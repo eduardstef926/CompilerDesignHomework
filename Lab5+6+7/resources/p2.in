@@ -1,0 +1,12 @@
+int[] x
+read x
+int number
+read number
+int sum
+sum=0
+for(elem in x){
+   if(elem==number){
+	   sum=sum+elem
+    }
+}
+print sum

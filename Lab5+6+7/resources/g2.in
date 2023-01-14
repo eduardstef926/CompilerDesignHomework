@@ -1,4 +1,4 @@
-program decllist declaration type1 arraydecl type statementlist statement simplstmt structstmt expression term factor assignstmt iostmt ifstmt whilestmt condition
+program decllist declaration type1 arraydecl type statementlist statement for simplstmt structstmt expression term factor assignstmt iostmt ifstmt whilestmt condition "{" "}"
 var ";" "," identifier ":" "bool" "char" "int" "array" "[" "]" nr "of" stmt stmtlist "+" "*" "(" ")" "=" "read" "print" "<" "<=" "=" "<>" ">=" ">"
 program
 program->var decllist ";"
