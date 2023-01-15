@@ -1,4 +1,3 @@
-// compute the gcd of 2 numbers
 int a
 read a
 int b 

@@ -1,4 +1,3 @@
-//compute the sum of n numbers
 int n
 read n
 int sum
