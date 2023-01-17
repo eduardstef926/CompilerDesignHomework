@@ -14,8 +14,6 @@ class Scanner:
         if len(self.exceptionList) == 0:
             print('Lexically correct')
             self.save(self.pif, 'resources/pif.out')
-            self.saveST(self.symbolTable.table, 'resources/st.out')
-            self.saveST(self.constantTable.table, 'resources/ct.out')
         else:
             print('Lexical error:')
             print(self.exceptionList)
