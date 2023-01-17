@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.*;
+import java.util.Scanner;
 
 public class FiniteAutomation {
     public Set<String> alphabet, allStateList, finalStates;
@@ -19,8 +20,7 @@ public class FiniteAutomation {
          * This function will split the input automata file
          * and put the values for the allStateList, alphabet
          * initialState, finalState and transitions hashSets of
-         * the input class. If
-         * we do not find the input file we
+         * the input class.If we do not find the input file we
          * throw an exception.
          */
         try{
