@@ -1,0 +1,6 @@
+S A
+z x y
+S
+S -> z A
+A -> x A
+A -> y
