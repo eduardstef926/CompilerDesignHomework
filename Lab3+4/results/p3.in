@@ -1,0 +1,13 @@
+int n
+read n
+int sum
+sum=0
+int i
+i=0
+while(i < n){
+   int a
+   read a
+   sum=sum+a
+   i=i+1
+}
+print sum

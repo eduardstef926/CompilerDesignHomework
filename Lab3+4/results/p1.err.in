@@ -1,0 +1,17 @@
+int x
+read x
+int y
+read y
+int z
+read z
+max=\0
+if(max < x){
+   max=x;
+}
+if(max < y){
+   max===y;
+}
+if(max < z){
+   max=z;
+}
+print max
